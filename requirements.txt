@@ -1,0 +1,26 @@
+# 基础环境
+python >= 3.8
+
+# 深度学习框架
+tensorflow >= 2.8.0
+
+# 数值计算与数据处理
+numpy >= 1.21.0
+pandas >= 1.4.0
+
+# 可视化
+matplotlib >= 3.4.0
+seaborn >= 0.11.0
+
+# 机器学习工具
+scikit-learn >= 1.0.0
+
+# 配置文件解析
+configparser >= 5.0.2
+
+# 数据处理相关
+mne >= 1.0.0  # 脑电信号处理库
+
+# 可选：用于模型可视化
+pydot >= 1.4.2
+graphviz >= 0.19.1
