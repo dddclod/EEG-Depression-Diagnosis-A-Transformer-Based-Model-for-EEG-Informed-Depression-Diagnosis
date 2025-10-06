@@ -1,0 +1,36 @@
+# 实验记录：Transformer+3D融合模型性能测试
+- **实验编号**：EXP-20241007-001
+- **日期**：2024-10-07
+- **实验人**：张三
+- **Commit ID**：a1b2c3d4e5f6
+
+## 1. 实验目的
+验证 Transformer 频谱流 + 3D DenseNet 时空流的双流 模型在 MODMA 数据集上的分类效果。
+
+## 2. 实验环境
+- **硬件**：NVIDIA RTX 3090, 24GB
+- **软件**：Ubuntu 22.04, Python 3.8.10
+- **依赖**：tensorflow==2.8.0, numpy==1.21.6, matplotlib==3.5.2, scikit-learn==1.0.2
+- **框架**：TensorFlow 2.8
+
+## 3. 数据集
+- **名称**：MODMA EEG Dataset（Lanzhou University）
+- **预处理**：0.1-40Hz 带通滤波，ICA 去伪影，全脑平均重参考
+- **划分**：train:val:test = 7:1:2
+
+## 4. 模型配置
+- **模型结构**：
+  - Transformer 频谱流：4 heads, embedding dim 64
+  - 3D DenseNet 时空流：分解式 3D 卷积
+- **超参数**：
+  - batch_size = 16
+  - lr = 1e-3
+  - epochs = 100
+  - class_weight = {0:0.925, 1:1.088}
+- **优化器**：Adam
+- **损失函数**：CategoricalCrossentropy
+
+## 5. 实验步骤
+```bash
+python create_labels.py --data_path data/processed/
+python run.py --config config.ini --transformer_config config_transformer.ini
