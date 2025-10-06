@@ -150,12 +150,12 @@ python baseline_comparison.py --models cnn gcn lstm sst-emotionnet
 
 ## Experimental Results  
 ### 1. Model Performance (MODMA Test Set)  
-| Metric         | Proposed Model | SST-EmotionNet | CNN     | GCN     | LSTM    |  
-|----------------|----------------|----------------|---------|---------|---------|  
-| Accuracy       | 0.8750         | 0.8125         | 0.4463  | 0.5707  | 0.5481  |  
-| Precision      | 0.9028         | 0.8146         | 0.3711  | 0.2854  | 0.0000  |  
-| Recall         | 0.8750         | 0.8125         | 0.4170  | 0.5000  | 0.0000  |  
-| F1-Score       | 0.8750         | 0.8102         | 0.3927  | 0.3634  | 0.0000  |  
+| Metric         | Proposed Model | SST-EmotionNet | CNN     | GCN     | LSTM    | EEGNet  |  
+|----------------|----------------|----------------|---------|---------|---------|---------|  
+| Accuracy       | 0.8750         | 0.8125         | 0.4463  | 0.5707  | 0.5481  | 0.7656  |  
+| Precision      | 0.9028         | 0.8146         | 0.3711  | 0.2854  | 0.0000  | 0.7659  |  
+| Recall         | 0.8750         | 0.8125         | 0.4170  | 0.5000  | 0.0000  | 0.7586  |  
+| F1-Score       | 0.8750         | 0.8102         | 0.3927  | 0.3634  | 0.0000  | 0.7600  |  
 
 ### 2. Key Advantages  
 - **No Missed Diagnoses**: The confusion matrix shows 100% recognition rate of depressed samples, meeting the clinical need for "avoiding missed diagnoses" in early screening .  
