@@ -1,5 +1,3 @@
-# EEG-MultiAttention-Depression-Diagnosis
-This project leverages EEG-based deep learning for objective depression diagnosis. A custom Transformer with dynamic brain-region weighting and cross-frequency attention achieves 94.3% accuracy on the MOMDA dataset, improving interpretability and outperforming CNN, LSTM, and SST-EmotionNet baselines.
 # EEG-Depression-Diagnosis: A Transformer-Based Model for EEG-Informed Depression Diagnosis  
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)  
 ![Python Version](https://img.shields.io/badge/Python-3.8%2B-blue.svg)  
